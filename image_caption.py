@@ -39,13 +39,7 @@ if uploaded_image is not None:
   st.image(image, caption='업로드된 이미지', use_container_width=True)
   if st.button("이미지 설명 생성"):
     base64_image = encode_image_to_base64(image)
-
-    headers = {
-        "Content-Type": "application/json",
-        "x-goog-api-key": st.secrets["GOOGLE_API_KEY"]
-    } #<-
-
-
+    
     prompt = [{"text": "이 이미지에 무엇이 있나요?"}, {"inline_data": {"mime_type": "image/jpeg", "data": base64_image}}] #<-
     response = model.generate_content(prompt) #<-
     try: #<-
