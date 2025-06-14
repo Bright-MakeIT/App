@@ -1,2 +1,4 @@
 google-generativeai
 plotly
+torch
+diffusers
