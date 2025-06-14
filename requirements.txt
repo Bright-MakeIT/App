@@ -3,3 +3,4 @@ plotly
 torch
 diffusers
 transformers
+accelerate
