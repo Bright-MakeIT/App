@@ -42,10 +42,10 @@ def modify_prompt_based_on_selection(prompt, image_type, style, quality):
 @st.cache_resource
 def load_model():
     pipe = StableDiffusionPipeline.from_pretrained(
-        "runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16
+        "runwayml/stable-diffusion-v1-5", torch_dtype=torch.float32 #<-
     )
     if torch.cuda.is_available():
-        pipe = pipe.to("cuda")
+        pipe = pipe.to("cpu") #<-
     return pipe
 
 pipe = load_model()
