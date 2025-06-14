@@ -2,3 +2,4 @@ google-generativeai
 plotly
 torch
 diffusers
+transformers
