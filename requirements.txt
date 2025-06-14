@@ -1,6 +1,2 @@
 google-generativeai
 plotly
-torch
-diffusers
-transformers
-accelerate
